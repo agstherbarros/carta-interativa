@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amo você</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Feliz dia das mulheres!! &#x1F48C</strong>
+                            <img src="assets/momo.jpg" alt="momooo" height="170px" style="margin-left: 5px;">
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <audio id="audioClick" >
+        <source src="assets/ssstik.io_1739096427086.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        const heart = document.querySelector('.heart');
+        const audio = document.getElementById('audioClick');
+    
+        heart.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+            
+            // Reproduz o áudio ao clicar no coração
+            audio.play().catch(error => {
+                console.log("Erro ao reproduzir áudio:", error);
+            });
+        });
+    </script>
+</body>
+</html>
